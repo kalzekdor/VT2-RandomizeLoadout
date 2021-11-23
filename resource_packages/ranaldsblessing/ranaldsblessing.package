@@ -1,0 +1,11 @@
+mod = [
+	"ranaldsblessing"
+]
+
+package = [
+	"resource_packages/ranaldsblessing/ranaldsblessing"
+]
+
+lua = [
+	"scripts/mods/ranaldsblessing/*"
+]
