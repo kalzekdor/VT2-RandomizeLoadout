@@ -9,6 +9,7 @@ mod.randomize = function()
 	
 			local player = Managers.player:local_player()
 			local career_name = player:career_name()
+			
 			local inventory_extension = ScriptUnit.extension(player.player_unit, "inventory_system")
 			
 			
@@ -60,7 +61,7 @@ mod.randomize = function()
 			local chosenMelee = availableMelee[math.random(#availableMelee)]
 			local chosenRanged
 			
-			if career_name == "es_questingknight" or career_name == "dr_slayer" then --Grail Knight and Slayer use two melee weapons
+			if career_name == "es_questingknight" or career_name == "dr_slayer" or career_name == "wh_priest" then --Grail Knight, Slayer, and Warrior Priest use two melee weapons
 				chosenRanged = availableMelee[math.random(#availableMelee)]
 				attempt = 1
 				while chosenRanged.backend_id == chosenMelee.backend_id do --Don't equip same item in both melee slots
